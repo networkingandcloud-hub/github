@@ -1,0 +1,70 @@
+Install Git
+
+sudo apt update
+sudo apt install git -y
+
+
+Check:
+
+git --version
+
+
+Configure Git
+
+git config --global user.name "YourName"
+git config --global user.email "youremail@gmail.com"
+
+
+Verify:
+
+git config --list
+
+
+Create Repository (GitHub Website)
+
+Login to github.com
+
+Create new repository
+
+Copy HTTPS URL
+
+Example:
+
+https://github.com/username/myrepo.git
+
+
+Generate Personal Access Token (PAT)
+Path:
+
+GitHub → Settings → Developer settings
+→ Personal access tokens → Tokens (classic)
+→ Generate new token
+
+
+Select permissions:
+
+repo
+workflow
+
+
+Copy and save the token.
+
+Push Code Using HTTPS
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/username/myrepo.git
+git push -u origin main
+
+
+When prompted:
+
+Username: GitHub username
+Password: Personal Access Token
+
+
+Save Credentials (Optional)
+
+git config --global credential.helper store
